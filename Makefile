@@ -31,7 +31,7 @@ FILE1 := test_outputs/
 
 test: ${OBJS}
 	cc ${CFLAGS} ${OBJS} -L. $(LIB_INCLUDE)
-	for arg in INT_TEST_ U_INT_TEST_ STR_TEST_ CHAR_TEST_ HEX_TEST_LOW_ HEX_TEST_UPPER_ PRINT_TEST_ POINTER_TEST_; do \
+	for arg in INT_TEST_ U_INT_TEST_ STR_TEST_ CHAR_TEST_ HEX_TEST_LOW_ HEX_TEST_UPPER_ PRINT_TEST_ POINTER_TEST_ MIXED_TEST_; do \
 		for number in 0 1 2 3 4 5 6 7 8 9; do \
 			for fun in _FT _ORG; do \
 				./a.out $$arg $$number $$fun > test_outputs/$$arg$$number$$fun.output; \

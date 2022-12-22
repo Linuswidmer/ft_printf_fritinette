@@ -101,4 +101,14 @@ int main(int argc, char **argv)
         printf("\n%i", printf("%p", pointer_test[atoi(argv[2])]));
     }
   }
+  else if(strncmp(argv[1], "MIXED_TEST", 10) == 0)
+  {
+    if (str_test[atoi(argv[2])])
+    {
+      if(strncmp(argv[3], "_FT", 3) == 0)
+        printf("\n%i", ft_printf("some text\n%i%u%c%x%X%p%s", int_test[atoi(argv[2])], u_int_test[atoi(argv[2])], char_test[atoi(argv[2])], hex_test_low[atoi(argv[2])], hex_test_upper[atoi(argv[2])], pointer_test[atoi(argv[2])], str_test[atoi(argv[2])])); 
+      else
+        printf("\n%i", printf("some text\n%i%u%c%x%X%p%s", int_test[atoi(argv[2])], u_int_test[atoi(argv[2])], char_test[atoi(argv[2])], hex_test_low[atoi(argv[2])], hex_test_upper[atoi(argv[2])], pointer_test[atoi(argv[2])], str_test[atoi(argv[2])]));
+    }
+  }
 }
